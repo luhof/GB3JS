@@ -10,9 +10,25 @@
         <canvas id="three-canvas" width="640" height="480">
 
         </canvas>
+        <div class="box data" id="cartridge-data" style="display: none;">
+            <div id="title" class="title"></div>
+            <div id="cartridge"></div>
+            <input type="button" id="save" value="Guardar" onclick="saveCartridgeRam()" style="display: none;" />
+            <input type="button" id="delete" value="Eliminar partida" onclick="deleteCartridgeRam()" style="display: none;" />
+        </div>
+        <div class="box display">
+            <canvas id="display" width="320" height="288"></canvas>
+            <div id="fps"></div>
+        </div>
+    
+        <button onclick="loadMarioLand()">Start</button>
     </div>
+
     
     <script src="node_modules/three/build/three.min.js"></script>
+    <script src="lib/Z80.js"></script>
+    <script src="lib/GameBoy.js"></script>
+    <script src="lib/emulator.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

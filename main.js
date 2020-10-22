@@ -20,7 +20,7 @@ function init() {
     threeCanvas = document.getElementById("three-canvas");
 
     renderer = new THREE.WebGLRenderer( { antialias: true, canvas: threeCanvas } );
-    document.body.appendChild( renderer.domElement );
+    
  
 }
  
@@ -34,3 +34,9 @@ function animate() {
     renderer.render( scene, camera );
  
 }
+
+function loadMarioLand(){
+    downloadROM('supermarioland.gb');
+}
+
+   
